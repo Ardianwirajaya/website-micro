@@ -1,8 +1,0 @@
-{
-  "version": 2,
-  "rewrites": [
-    { "source": "/api/auth", "destination": "/api/auth/index.js" },
-    { "source": "/api/products", "destination": "/api/products/index.py" },
-    { "source": "/api/orders", "destination": "/api/orders/main.go" }
-  ]
-}
