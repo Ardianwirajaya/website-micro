@@ -20,7 +20,7 @@ export default function Home() {
 
     //Redirect if login success
     if (action === 'login' && data.success) {
-      router.push('/Dashboard');
+      router.push('/dashboard');
     }
   };
 
