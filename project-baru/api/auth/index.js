@@ -40,9 +40,19 @@ export default async function handler(req, res) {
       if (req.url.includes('/login')) {
         const user = await collection.findOne({ username, password });
         if (user) {
-          return res.status(200).json({ message: `Selamat datang, ${username}!` });
+          return res.status(200).json
+	({
+    		success: true,
+    		message: `Selamat datang, ${username}!`,
+    		username
+  	});
         } else {
-          return res.status(401).json({ message: "Username atau Password salah!" });
+          return res.status(401).json
+	({
+  		success: false,
+  		message: "Username atau Password salah!"
+	});
+
         }
       }
     }
